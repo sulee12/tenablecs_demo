@@ -136,7 +136,7 @@ jobs:
       run: |
         echo "ENV check:"
         echo "ACCURICS_APP_ID is $(echo $ACCURICS_APP_ID | wc -c) characters long"
-        echo "ACCURICS_ENV_ID_AWS is $(echo $ACCURICS_ENV_ID_AWS | wc -c) characters long"
+        echo "ACCURICS_ENV_ID_AWS is $(echo $ACCURICS_ENV_ID_AWS -fail; | wc -c) characters long"
         echo "ACCURICS_REPO_NAME is $ACCURICS_REPO_NAME"
         echo ""
         echo -n "terraform version:"
